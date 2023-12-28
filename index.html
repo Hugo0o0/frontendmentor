@@ -4,24 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card">
-      <img class="card__thumbnail" src="./images/illustration-article.svg" />
-      <button class="card__tag">Learning</button>
-      <p class="card__date">Published 21 Dec 2023</p>
-      <h1 class="card__title">HTML & CSS foundations</h1>
-      <p class="card__text">
-        These languages are backbone of every website,defining structure,content
-        and presentation
-      </p>
+    <header class="header"></header>
 
-      <div class="card__author">
-        <img class="card__author-image" src="./images/image-avatar.webp" />
-        <h2>Greg Hooper</h2>
+    <div class="faq">
+      <div class="faq__head">
+        <img src="./images/icon-star.svg" />
+        <h1>FAQs</h1>
       </div>
+
+      <ul class="faq__list">
+        <li role="button" tabindex="0" data-id="0" class="faq__item">
+          <div class="faq__title">
+            <h2 class="faq__question">
+              What is Frontend Mentor? and how will it help me?
+            </h2>
+            <img class="faq__button" src="./images/icon-plus.svg" alt="" />
+          </div>
+          <p class="faq__answer faq__answer--hidden">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS , Javascript. It's suitable for all levels and ideal for
+            portfolio building
+          </p>
+        </li>
+
+        <li role="button" data-id="1" tabindex="1" class="faq__item">
+          <div class="faq__title">
+            <h2 class="faq__question">Is Frontend Mentor free?</h2>
+            <img class="faq__button" src="./images/icon-plus.svg" alt="" />
+          </div>
+          <p class="faq__answer faq__answer--hidden">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS , Javascript. It's suitable for all levels and ideal for
+            portfolio building
+          </p>
+        </li>
+
+        <li role="button" data-id="2" tabindex="2" class="faq__item">
+          <div class="faq__title">
+            <h2 class="faq__question">
+              Can i use my Frontend Mentor projects in my portfolio?
+            </h2>
+            <img class="faq__button" src="./images/icon-plus.svg" alt="" />
+          </div>
+          <p class="faq__answer faq__answer--hidden">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS , Javascript. It's suitable for all levels and ideal for
+            portfolio building
+          </p>
+        </li>
+
+        <li role="button" data-id="3" tabindex="3" class="faq__item">
+          <div class="faq__title">
+            <h2 class="faq__question">
+              How can i get help if i'm stuck on a challenge?
+            </h2>
+            <img class="faq__button" src="./images/icon-plus.svg" alt="" />
+          </div>
+          <p class="faq__answer faq__answer--hidden">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS , Javascript. It's suitable for all levels and ideal for
+            portfolio building
+          </p>
+        </li>
+      </ul>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
