@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;400;700;800&family=Figtree:ital,wght@0,400;0,600;0,800;1,300&display=swap");
+
+:root {
+  --ff-primary: "Figtree", sans-serif;
+
+  --clr-primary: hsl(47, 88%, 63%);
+
+  --clr-neutral-1: hsl(0, 0%, 100%);
+
+  --clr-neutral-2: hsl(0, 0%, 50%);
+
+  --clr-neutral-3: hsl(0, 0%, 7%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-primary);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+
+  max-width: 40rem;
+
+  background-color: var(--clr-neutral-1);
+
+  border: 1px solid var(--clr-neutral-3);
+  border-radius: 1.5rem;
+
+  padding: 2rem;
+
+  box-shadow: 10px 10px 0px var(--clr-neutral-3);
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 0px var(--clr-neutral-3);
+}
+.card__thumbnail {
+  border-radius: 1rem;
+  width: 100%;
+}
+.card__tag {
+  color: var(--clr-neutral-3);
+  background-color: var(--clr-primary);
+
+  padding: 0.6rem 1.2rem;
+  font-weight: 800;
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+
+  border-radius: 0.5rem;
+}
+
+.card__date {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-3);
+}
+
+.card__title {
+  font-size: 2.5rem;
+  color: var(--clr-neutral-3);
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card__title:hover {
+  color: var(--clr-primary);
+}
+
+.card__text {
+  font-size: 1.6rem;
+  color: var(--clr-neutral-2);
+  font-weight: normal;
+}
+
+.card__author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.card__author-image {
+  width: 30px;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    max-width: 30rem;
+  }
+  .card__title {
+    font-size: 2rem;
+  }
+}
