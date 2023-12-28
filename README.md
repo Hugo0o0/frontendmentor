@@ -39,5 +39,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/HugoHurleyy)
-- Twitter - [@yourusername](https://www.twitter.com/sukrutnrvd)
+- Frontend Mentor - [@HugoHurleyy](https://www.frontendmentor.io/profile/HugoHurleyy)
+- Twitter - [@sukrutnrvd](https://www.twitter.com/sukrutnrvd)
