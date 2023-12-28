@@ -1,0 +1,38 @@
+.card {
+  background-color: var(--clr-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  max-width: 48rem;
+
+  padding: 5rem 6rem;
+
+  border-radius: 2rem;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.card__heading {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    height: 100dvh;
+    border-radius: 0;
+    padding: 2rem;
+  }
+
+  .card__heading {
+    font-size: 3rem;
+  }
+}

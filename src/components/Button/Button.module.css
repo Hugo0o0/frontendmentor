@@ -1,0 +1,18 @@
+.btn {
+  background: var(--clr-neutral-dark-grey);
+
+  padding: 1.5rem 1rem;
+
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-weight: 600;
+
+  border-radius: 0.8rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #ff5474, #ff6742);
+}

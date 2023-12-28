@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --ff-primary: "Roboto", sans-serif;
+
+  --clr-primary: hsl(4, 100%, 67%);
+
+  --clr-neutral-dark-grey: hsl(234, 29%, 20%);
+  --clr-neutral-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-neutral-grey: hsl(231, 7%, 60%);
+
+  --clr-white: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  color: var(--clr-neutral-dark-grey);
+  font-weight: 400;
+
+  background-color: var(--clr-neutral-charcoal-grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1.5;
+}
+li {
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+li:before {
+  content: "";
+  height: 2rem;
+  position: absolute;
+  width: 2rem;
+  left: 0rem;
+  display: block;
+  float: left;
+  margin-left: 0rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+li:before {
+  background: url("/src/assets/images/icon-list.svg");
+  background-size: cover;
+}
