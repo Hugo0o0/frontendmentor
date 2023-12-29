@@ -1,43 +1,31 @@
-import { Lizard, Paper, Rock, Scissors, Spock } from "~/components/Icons";
+import { Gesture } from "~/state/game/game-slices";
+import { GestureIcon } from "~/utils/enum/GestureIcon";
 
-export enum Gestures {
-  Rock,
-  Paper,
-  Scissors,
-  Spock,
-  Lizard,
-}
-
-export const gestures = [
+export const gestures: Gesture[] = [
   {
     name: "rock",
-    icon: <Rock />,
-    beats: [Gestures.Scissors, Gestures.Lizard],
-    index: 0,
+    beats: [GestureIcon.scissors, GestureIcon.lizard],
+    index: GestureIcon.rock,
   },
   {
     name: "paper",
-    icon: <Paper />,
-    beats: [Gestures.Rock, Gestures.Spock],
-    index: 1,
+    beats: [GestureIcon.rock, GestureIcon.spock],
+    index: GestureIcon.paper,
   },
   {
     name: "scissors",
-    icon: <Scissors />,
-    beats: [Gestures.Paper, Gestures.Lizard],
-    index: 2,
+    beats: [GestureIcon.paper, GestureIcon.lizard],
+    index: GestureIcon.scissors,
   },
   {
     name: "spock",
-    icon: <Spock />,
-    beats: [Gestures.Rock, Gestures.Scissors],
-    index: 3,
+    beats: [GestureIcon.rock, GestureIcon.scissors],
+    index: GestureIcon.spock,
   },
   {
     name: "lizard",
-    icon: <Lizard />,
-    beats: [Gestures.Spock, Gestures.Paper],
-    index: 4,
+    beats: [GestureIcon.spock, GestureIcon.paper],
+    index: GestureIcon.lizard,
   },
 ];
 

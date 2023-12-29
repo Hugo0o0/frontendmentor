@@ -2,7 +2,7 @@ import Gesture from "~/components/Gesture/Gesture";
 import styles from "./Pentagon.module.css";
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
-import gestures from "./gestures";
+import pentagonGesturesConfig from "./pentagon-gestures-config";
 
 const Pentagon = () => {
   return (
@@ -13,15 +13,15 @@ const Pentagon = () => {
       exit={{ y: "100%", opacity: 0 }}
       className={styles["pentagon-container"]}
     >
-      {gestures.map((gesture) => {
+      {pentagonGesturesConfig.map((config) => {
         return (
           <div
             className={`${styles["pentagon__icon"]} ${
-              styles[`pentagon__${gesture.position}`]
+              styles[`pentagon__${config.position}`]
             }`}
             key={nanoid()}
           >
-            <Gesture icon={gesture.icon} />
+            <Gesture icon={config.iconName} />
           </div>
         );
       })}

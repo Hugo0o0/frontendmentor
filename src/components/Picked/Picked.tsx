@@ -32,7 +32,7 @@ const Picked = () => {
     >
       <div className={styles["picked__item"]}>
         <h3>You Picked</h3>
-        <Gesture icon={userGesture?.icon!} />
+        <Gesture icon={userGesture?.name!} />
       </div>
 
       <div className={styles["picked__result"]}>
@@ -48,7 +48,7 @@ const Picked = () => {
         <h3>The House Picked</h3>
         {randomGesture && (
           <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-            <Gesture icon={randomGesture?.icon!} />
+            <Gesture icon={randomGesture?.name} />
           </motion.div>
         )}
         {!randomGesture && (

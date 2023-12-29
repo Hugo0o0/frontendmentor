@@ -2,29 +2,24 @@ import styles from "./Gesture.module.css";
 import classnames from "classnames";
 import { useDispatch } from "react-redux";
 import { setUserGesture } from "~/state/game/game-slices";
-import { Gestures, gestures } from "~/utils/functions/get-random-gestures";
+import { gestures } from "~/utils/functions/get-random-gestures";
+import { GestureIcon } from "~/utils/enum/GestureIcon";
+import { getIconByName } from "~/utils/functions/get-icon-by-name";
 
-const Gesture = ({ icon }: { icon: JSX.Element }) => {
+const Gesture = ({ icon }: { icon: keyof typeof GestureIcon }) => {
   const dispatch = useDispatch();
-
-  const iconName: keyof typeof Gestures = icon?.type?.name || "Rock";
-
-  if (!iconName) throw new Error("Icon is required");
 
   const className = classnames(
     styles.container,
-    styles[`container__icon--${iconName.toLowerCase()}`]
+    styles[`container__icon--${icon.toLowerCase()}`]
   );
 
   return (
     <div
-      onClick={dispatch.bind(
-        null,
-        setUserGesture(gestures[Gestures[iconName]])
-      )}
+      onClick={dispatch.bind(null, setUserGesture(gestures[GestureIcon[icon]]))}
       className={className}
     >
-      <div className={styles["container__icon"]}>{icon}</div>
+      <div className={styles["container__icon"]}>{getIconByName(icon)}</div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { GestureIcon } from "~/utils/enum/GestureIcon";
 
-interface Gesture {
-  name: string;
-  icon: JSX.Element;
+export interface Gesture {
+  name: keyof typeof GestureIcon;
   index: number;
   beats: number[];
 }
@@ -23,12 +23,12 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    setUserGesture(state, action: PayloadAction<Gesture | undefined>) {
+    setUserGesture(state, action: PayloadAction<Gesture>) {
       if (!state.randomGesture) {
         state.userGesture = action.payload;
       }
     },
-    setRandomGesture(state, action: PayloadAction<Gesture | undefined>) {
+    setRandomGesture(state, action: PayloadAction<Gesture>) {
       state.randomGesture = action.payload;
     },
     resetGestures(state) {
