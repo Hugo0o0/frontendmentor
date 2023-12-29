@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Hugo0o0/frontendmentor/tree/rock-paper-scissors)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/Hugo0o0/frontendmentor/tree/rock-paper-scissors)
+- Live Site URL: [Live Example](https://your-live-site-url.com)
 
 ### Built with
 
@@ -34,8 +34,8 @@ Users should be able to:
 While dealing with this challange most important thing that i learn basics of the redut toolkit.
 It is great tool managing complex states.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Classnames](https://www.npmjs.com/package/classnames) - This is amazing tool for dealing with complex class names.
 
 ## Author
 
