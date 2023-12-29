@@ -16,7 +16,7 @@ Users should be able to:
 
 ### What i learned
 
-- I learned passing all available props to the my custom button
+- I learned passing all available props to the my custom button.
 
 ### Screenshot
 
