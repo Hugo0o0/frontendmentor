@@ -1,43 +1,30 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# React + TypeScript + Vite
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### The challenge
+Currently, two official plugins are available:
 
-Users should be able to:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Add their email and submit the form
-- See a success message with their email after successfully submitting the form
-- See form validation messages if:
-  - The field is left empty
-  - The email address is not formatted correctly
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## Expanding the ESLint configuration
 
-### What i learned
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- I learned passing all available props to the my custom button
+- Configure the top-level `parserOptions` property like this:
 
-### Screenshot
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-![](./screenshot.png)
-
-### Links
-
-- Solution URL: [Solution Codes](https://github.com/Hugo0o0/frontendmentor/tree/newsletter-sign-up-form-with-success-message)
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Desktop-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
-
-- [Validator](https://www.npmjs.com/package/validator) - This helped me for validation email reason.
-
-## Author
-
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/HugoHurleyy)
-- Twitter - [@yourusername](https://www.twitter.com/sukrutnrvd)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
