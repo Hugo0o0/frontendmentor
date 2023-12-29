@@ -1,0 +1,49 @@
+.container {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container__icon {
+  width: 12rem;
+  height: 12rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+
+  box-shadow: 0px -5px 0px 0px hsl(228, 22%, 77%);
+}
+
+.container__icon--scissors {
+  background-image: var(--clr-scissors-gradient);
+  box-shadow: 0 5px 0 0 hsl(28, 75%, 45%);
+}
+
+.container__icon--paper {
+  background-image: var(--clr-paper-gradient);
+  box-shadow: 0 5px 0 0 hsl(229, 65%, 46%);
+}
+
+.container__icon--rock {
+  background-image: var(--clr-rock-gradient);
+  box-shadow: 0 5px 0 0 hsl(346, 77%, 35%);
+}
+
+.container__icon--lizard {
+  background-image: var(--clr-lizard-gradient);
+  box-shadow: 0 5px 0 0 hsl(261, 52%, 44%);
+}
+
+.container__icon--spock {
+  background-image: var(--clr-cyan-gradient);
+  box-shadow: 0 5px 0 0 hsl(194, 59%, 43%);
+}

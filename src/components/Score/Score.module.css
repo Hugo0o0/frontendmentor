@@ -1,0 +1,24 @@
+.score {
+  background-color: #fcfcfc;
+
+  display: grid;
+  place-items: center;
+
+  padding: 1rem 4.5rem;
+
+  border-radius: 10px;
+}
+
+.score__text {
+  color: var(--clr-blue);
+  word-spacing: 1rem;
+  letter-spacing: 2px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.score__point {
+  color: #59556d;
+  font-size: 7rem;
+}
