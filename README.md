@@ -18,7 +18,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/Hugo0o0/frontendmentor/tree/rock-paper-scissors)
-- Live Site URL: [Live Example](frontendmentor-dly4.vercel.app)
+- Live Site URL: [Live Example](https://frontendmentor-dly4.vercel.app)
 
 ### Built with
 
