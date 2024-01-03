@@ -17,7 +17,7 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-## My process
+
 
 ### Built with
 
