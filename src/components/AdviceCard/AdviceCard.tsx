@@ -4,10 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store/store";
 import { getRandomAdvice } from "@/api/http-client";
 import { motion } from "framer-motion";
+import Loader from "../Loader/Loader";
 
 const AdviceCard = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { adviceNumber, adviceText } = useSelector(
+  const { adviceNumber, adviceText, isLoading } = useSelector(
     (state: RootState) => state.advice
   );
 
@@ -42,7 +43,7 @@ const AdviceCard = () => {
         type="button"
         className={styles.card__action}
       >
-        <Dice />
+        {isLoading ? <Loader /> : <Dice />}
       </button>
     </div>
   );
