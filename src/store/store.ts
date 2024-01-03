@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import networkReducer from "@/state/network/network-slice";
+import adviceSlice from "./advice/advice-slice";
 
 export const store = configureStore({
   reducer: {
-    network: networkReducer,
+    advice: adviceSlice,
   },
 });
 
