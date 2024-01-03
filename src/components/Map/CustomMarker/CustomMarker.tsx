@@ -1,5 +1,4 @@
 import { Icon } from "leaflet";
-import { Location } from "@/components/Icons";
 import { Marker, Popup, useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { RootState } from "@/state/store";
