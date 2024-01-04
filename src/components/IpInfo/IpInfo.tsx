@@ -17,26 +17,26 @@ const IpInfo = () => {
         >
           <div className={styles.ipinfo__detail}>
             <h5 className={styles["ipinfo__detail--title"]}>Ip Address</h5>
-            <h1 className={styles["ipinfo__detail--info"]}>{network.ip}</h1>
+            <h2 className={styles["ipinfo__detail--info"]}>{network.ip}</h2>
           </div>
 
           <div className={styles.ipinfo__detail}>
             <h5 className={styles["ipinfo__detail--title"]}>Location</h5>
-            <h1 className={styles["ipinfo__detail--info"]}>
+            <h2 className={styles["ipinfo__detail--info"]}>
               {network.location}
-            </h1>
+            </h2>
           </div>
 
           <div className={styles.ipinfo__detail}>
             <h5 className={styles["ipinfo__detail--title"]}>Timezone</h5>
-            <h1 className={styles["ipinfo__detail--info"]}>
+            <h2 className={styles["ipinfo__detail--info"]}>
               {network.timezone}
-            </h1>
+            </h2>
           </div>
 
           <div className={styles.ipinfo__detail}>
             <h5 className={styles["ipinfo__detail--title"]}>ISP</h5>
-            <h1 className={styles["ipinfo__detail--info"]}>{network.isp}</h1>
+            <h2 className={styles["ipinfo__detail--info"]}>{network.isp}</h2>
           </div>
         </motion.div>
       )}

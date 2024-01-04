@@ -6,12 +6,15 @@ import { useState } from "react";
 import { AppDispatch } from "@/state/store";
 import { useDispatch } from "react-redux";
 import { getNetworkInfo } from "@/api/http-client";
+import { validateIpAddress } from "@/utils/validate-ip";
 
 const Search = () => {
   const [ip, setIp] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
   const handleSearch = () => {
+    if (!validateIpAddress(ip)) return alert("Invalid IP Address");
+
     dispatch(getNetworkInfo(ip));
   };
 
