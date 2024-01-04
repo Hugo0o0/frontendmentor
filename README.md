@@ -17,8 +17,6 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-
-
 ### Built with
 
 - CSS custom properties
