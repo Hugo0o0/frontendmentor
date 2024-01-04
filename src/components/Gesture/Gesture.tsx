@@ -1,14 +1,12 @@
 import styles from "./Gesture.module.css";
 import classnames from "classnames";
-import { useDispatch } from "react-redux";
-import { setUserGesture } from "~/state/game/game-slices";
 import { gestures } from "~/utils/functions/get-random-gestures";
 import { GestureIcon } from "~/utils/enum/GestureIcon";
 import { getIconByName } from "~/utils/functions/get-icon-by-name";
+import useGesture from "~/utils/hooks/useGesture";
 
 const Gesture = ({ icon }: { icon: keyof typeof GestureIcon }) => {
-  const dispatch = useDispatch();
-
+  const { dispatch, setUserGesture } = useGesture();
   const className = classnames(
     styles.container,
     styles[`container__icon--${icon.toLowerCase()}`]

@@ -3,7 +3,6 @@ import { Lizard, Paper, Rock, Scissors, Spock } from "~/components/Icons";
 
 export const getIconByName = (name: keyof typeof GestureIcon) => {
   if (!name) throw new Error("Name is required");
-
   switch (name) {
     case "rock":
       return <Rock />;

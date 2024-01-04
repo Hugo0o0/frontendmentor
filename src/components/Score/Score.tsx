@@ -1,9 +1,8 @@
-import { useSelector } from "react-redux";
 import styles from "./Score.module.css";
-import { RootState } from "~/state/store";
+import useGesture from "~/utils/hooks/useGesture";
 
 const Score = () => {
-  const { points } = useSelector((state: RootState) => state.game);
+  const { points } = useGesture();
   return (
     <div className={styles.score}>
       <h5 className={styles["score__text"]}>Score</h5>

@@ -1,28 +1,29 @@
 import Gesture from "~/components/Gesture/Gesture";
 import styles from "./Picked.module.css";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
-import { setRandomGesture, resetGestures } from "~/state/game/game-slices";
 import Button from "../Button/Button";
-import { RootState } from "~/state/store";
 import { getRandomGestures } from "~/utils/functions/get-random-gestures";
-import { useEffect } from "react";
 import { getResult } from "~/utils/functions/get-result";
+import useGesture from "~/utils/hooks/useGesture";
+import useEffectWithTimeOut from "~/utils/hooks/useEffectWithTimeOut";
 
 const Picked = () => {
-  const dispatch = useDispatch();
-  const { randomGesture, userGesture } = useSelector(
-    (state: RootState) => state.game
-  );
+  const {
+    dispatch,
+    userGesture,
+    randomGesture,
+    setRandomGesture,
+    resetGestures,
+  } = useGesture();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
+  useEffectWithTimeOut(
+    () => {
       const randomGesture = getRandomGestures();
       dispatch(setRandomGesture(randomGesture));
-    }, 3000);
-
-    return () => clearTimeout(timeout);
-  }, []);
+    },
+    3000,
+    []
+  );
 
   return (
     <motion.div

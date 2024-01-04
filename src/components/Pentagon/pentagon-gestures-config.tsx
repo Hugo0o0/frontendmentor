@@ -1,4 +1,6 @@
 import { GestureIcon } from "~/utils/enum/GestureIcon";
+import { nanoid } from "nanoid";
+import Gesture from "~/components/Gesture/Gesture";
 
 const pentagonGesturesConfig: {
   position: string;
@@ -27,4 +29,23 @@ const pentagonGesturesConfig: {
   },
 ];
 
-export default pentagonGesturesConfig;
+export const renderPentagonGestures = (styles: CSSModuleClasses) => {
+  return (
+    <>
+      {pentagonGesturesConfig.map((config) => {
+        return (
+          <div
+            className={`${styles["pentagon__icon"]} ${
+              styles[`pentagon__${config.position}`]
+            }`}
+            key={nanoid()}
+          >
+            <Gesture icon={config.iconName} />
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+export default renderPentagonGestures;
