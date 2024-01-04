@@ -21,7 +21,6 @@ Users should be able to:
 - Live Site URL: [Live Example](https://frontendmentor-dly4.vercel.app)
 
 ### Built with
-
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
