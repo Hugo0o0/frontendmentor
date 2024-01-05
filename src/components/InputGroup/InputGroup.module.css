@@ -1,0 +1,11 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-group label {
+  color: var(--clr-dark-100);
+
+  opacity: 0.4;
+}

@@ -1,0 +1,36 @@
+.select-font {
+  display: flex;
+  justify-content: space-between;
+}
+.select-font__font {
+  width: 4rem;
+  height: 4rem;
+
+  background-color: #eff1fa;
+
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--ff-kumbh-sans);
+}
+
+.select-font__fonts {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.select-font__font--roboto {
+  font-family: var(--ff-roboto-slab);
+}
+.select-font__font--space {
+  font-family: var(--ff-space-mono);
+}
+.select-font__font--active {
+  background-color: var(--clr-dark-200);
+  color: white;
+}

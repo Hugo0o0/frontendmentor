@@ -1,42 +1,30 @@
-# Frontend Mentor - Rock, Paper, Scissors solution
+# React + TypeScript + Vite
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### The challenge
+Currently, two official plugins are available:
 
-Users should be able to:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- View the optimal layout for the game depending on their device's screen size
-- Play Rock, Paper, Scissors against the computer
-- Maintain the state of the score after refreshing the browser _(optional)_
-- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
+## Expanding the ESLint configuration
 
-### Screenshot
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-![](./screenshot.png)
+- Configure the top-level `parserOptions` property like this:
 
-### Links
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-- Solution URL: [Solution](https://github.com/Hugo0o0/frontendmentor/tree/rock-paper-scissors)
-- Live Site URL: [Live Example](https://frontendmentor-dly4.vercel.app)
-
-### Built with
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Desktop-first workflow
-- [React](https://reactjs.org/) - JS library
-
-### What I learned
-
-While dealing with this challange most important thing that i learn basics of the redut toolkit.
-It is great tool managing complex states.
-
-- [Redux Toolkit](https://redux-toolkit.js.org/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Classnames](https://www.npmjs.com/package/classnames) - This is amazing tool for dealing with complex class names.
-
-## Author
-
-- Frontend Mentor - [@HugoHurleyy](https://www.frontendmentor.io/profile/HugoHurleyy)
-- Twitter - [@sukrutnrvd](https://www.twitter.com/sukrutnrvd)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

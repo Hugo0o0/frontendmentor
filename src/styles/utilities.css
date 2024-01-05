@@ -1,0 +1,35 @@
+[class*="heading-"] {
+  color: var(--clr-gray-100);
+  font-weight: 700;
+}
+
+.heading-1 {
+  font-size: 10rem;
+
+  line-height: 120px;
+
+  letter-spacing: -5px;
+}
+
+.heading-2 {
+  font-size: 2.8rem;
+  line-height: 34px;
+
+  color: var(--clr-dark-200);
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+
+  line-height: normal;
+
+  letter-spacing: 15px;
+}
+
+.heading-4 {
+  font-size: 1.3rem;
+  line-height: normal;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--clr-dark-200);
+}

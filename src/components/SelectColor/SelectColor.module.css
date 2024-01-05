@@ -1,0 +1,34 @@
+.select-color {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-color__colors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.select-color__color {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.select-color__color--tomato {
+  background-color: var(--clr-tomato);
+}
+
+.select-color__color--pink {
+  background-color: var(--clr-pink);
+}
+
+.select-color__color--cyan {
+  background-color: var(--clr-cyan);
+}

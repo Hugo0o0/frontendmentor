@@ -1,28 +1,20 @@
-import "./App.css";
-import Pentagon from "~/components/Pentagon/Pentagon";
-import Head from "~/components/Head/Head";
-import Rules from "~/components/Rules/Rules";
-import RulesButton from "~/components/Rules/RulesButton";
-import Picked from "~/components/Picked/Picked";
-import { useEffect } from "react";
-import useGesture from "~/utils/hooks/useGesture";
+import styles from "./App.module.css";
+import Logo from "./components/Logo/Logo.tsx";
+import PomodoroControlPanel from "~/components/PomodoroControlPanel/PomodoroControlPanel.tsx";
+import Timer from "~/components/Timer/Timer.tsx";
+import Settings from "~/components/Settings/Settings.tsx";
+import Modal from "~/components/Modal/Modal.tsx";
 
-function App() {
-  const { randomGesture, userGesture, dispatch, setPoint } = useGesture();
-
-  useEffect(() => {
-    dispatch(setPoint());
-  }, [randomGesture]);
-
+const App = () => {
   return (
-    <main className="main">
-      <RulesButton />
-      <Rules />
-      <Head />
-      {!userGesture && <Pentagon />}
-      {userGesture && <Picked />}
-    </main>
+    <div className={styles.app}>
+      <Modal>asdasd</Modal>
+      <Logo />
+      <PomodoroControlPanel />
+      <Timer />
+      <Settings />
+    </div>
   );
-}
+};
 
 export default App;

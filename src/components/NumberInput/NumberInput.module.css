@@ -1,0 +1,36 @@
+.input-container {
+  display: flex;
+
+  align-items: center;
+  background-color: #eff1fa;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  width: 14rem;
+}
+
+.input {
+  padding: 2rem;
+
+  color: var(--clr-dark-100);
+
+  font-family: var(--ff-primary);
+
+  background-color: #eff1fa;
+  border-radius: 10px;
+
+  width: 100%;
+}
+
+.input__icons {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 0rem;
+
+  position: absolute;
+
+  right: 3rem;
+}

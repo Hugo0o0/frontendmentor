@@ -1,14 +1,18 @@
-import { ButtonHTMLAttributes } from "react";
 import styles from "./Button.module.css";
+import classNames from "classnames";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  active?: boolean;
 }
 
-const Button = ({ children, ...atrributes }: Props) => {
+const Button = ({ children, active, ...props }: ButtonProps) => {
+  const classes = classNames(styles.btn, {
+    [styles["btn--active"]]: active,
+  });
   return (
-    <button {...atrributes} className={styles.btn}>
-      Play Again
+    <button {...props} className={classes}>
+      {children}
     </button>
   );
 };

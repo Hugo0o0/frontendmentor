@@ -1,0 +1,43 @@
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 41rem;
+  height: 41rem;
+
+  border-radius: 100%;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow:
+    50px 50px 100px 0px #121530,
+    -50px -50px 100px 0px #272c5a;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  width: 36rem;
+  height: 36rem;
+
+  border-radius: 100%;
+
+  background-color: var(--clr-dark-200);
+
+  position: relative;
+  z-index: 1;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.timer__progress {
+  position: absolute;
+
+  width: 33.9rem;
+  height: 33.9rem;
+
+  border-radius: 100%;
+}
