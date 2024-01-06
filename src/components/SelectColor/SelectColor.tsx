@@ -1,53 +1,56 @@
-import { useEffect, useState } from "react";
+import classNames from "classnames";
 import styles from "./SelectColor.module.css";
-import { Correct } from "~/components/Icons";
+import { Correct } from "../Icons";
+import useTheme from "~/utils/hooks/useTheme";
+
+const colorButtons = [
+  {
+    id: 0,
+    color: "tomato",
+    classNames: classNames(
+      styles["select-color__option"],
+      styles["select-color__option--tomato"]
+    ),
+  },
+  {
+    id: 1,
+    color: "cyan",
+    classNames: classNames(
+      styles["select-color__option"],
+      styles["select-color__option--cyan"]
+    ),
+  },
+  {
+    id: 2,
+    color: "pink",
+    classNames: classNames(
+      styles["select-color__option"],
+      styles["select-color__option--pink"]
+    ),
+  },
+];
 
 const SelectColor = () => {
-  const [activeColor, setActiveColor] = useState("tomato");
+  const { theme, dispatch, setTheme } = useTheme();
 
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme) {
-      setActiveColor(theme);
-    }
-  }, []);
-
-  const handleColorChange = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const name = e.currentTarget.getAttribute("name");
-
-    if (!name) return;
-
-    document.documentElement.setAttribute("data-theme", name);
-    localStorage.setItem("theme", name);
-    setActiveColor(name);
+  const handleChangeColorTheme = (theme: number) => {
+    dispatch(setTheme(theme));
   };
 
   return (
     <div className={styles["select-color"]}>
       <h4 className="heading-4">COLOR</h4>
 
-      <div className={styles["select-color__colors"]}>
-        <button
-          name="tomato"
-          onClick={handleColorChange}
-          className={`${styles["select-color__color"]} ${styles["select-color__color--tomato"]}`}
-        >
-          {activeColor === "tomato" && <Correct />}
-        </button>
-        <button
-          name="cyan"
-          onClick={handleColorChange}
-          className={`${styles["select-color__color"]} ${styles["select-color__color--cyan"]}`}
-        >
-          {activeColor === "cyan" && <Correct />}
-        </button>
-        <button
-          name="pink"
-          onClick={handleColorChange}
-          className={`${styles["select-color__color"]} ${styles["select-color__color--pink"]}`}
-        >
-          {activeColor === "pink" && <Correct />}
-        </button>
+      <div className={styles["select-color__options"]}>
+        {colorButtons.map(({ classNames, id }) => (
+          <button
+            onClick={handleChangeColorTheme.bind(null, id)}
+            key={id}
+            className={classNames}
+          >
+            {theme === id && <Correct />}
+          </button>
+        ))}
       </div>
     </div>
   );

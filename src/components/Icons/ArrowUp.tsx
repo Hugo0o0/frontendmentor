@@ -4,7 +4,7 @@ const ArrowUp = () => {
       <path
         fill="none"
         stroke="#1E213F"
-        strokeOpacity=".25"
+        strokeOpacity="0.25"
         strokeWidth="2"
         d="M1 6l6-4 6 4"
       />

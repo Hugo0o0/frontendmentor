@@ -1,36 +1,71 @@
 .select-font {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-}
-.select-font__font {
-  width: 4rem;
-  height: 4rem;
 
-  background-color: #eff1fa;
+  border-bottom: 1px solid rgba(22, 25, 50, 0.1);
 
-  border-radius: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: var(--ff-kumbh-sans);
+  padding-bottom: 2.5rem;
 }
 
-.select-font__fonts {
+.select-font__options {
   display: flex;
   align-items: center;
-
   gap: 1rem;
 }
 
-.select-font__font--roboto {
-  font-family: var(--ff-roboto-slab);
+.select-font__option {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: var(--clr-white-200);
+
+  position: relative;
 }
-.select-font__font--space {
-  font-family: var(--ff-space-mono);
+
+.select-font__option::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: 1px solid var(--clr-white-200);
+
+  transition: transform 0.2s ease-in-out;
 }
-.select-font__font--active {
+.select-font__option:hover::before {
+  transform: scale(1.22);
+}
+
+.select-font__option--active {
   background-color: var(--clr-dark-200);
   color: white;
+}
+
+.select-font__option--active::before {
+  content: "";
+  border: none;
+}
+
+.select-font__option--kumbh {
+  font-family: var(--ff-kumbh);
+}
+
+.select-font__option--roboto {
+  font-family: var(--ff-roboto);
+}
+
+.select-font__option--space {
+  font-family: var(--ff-space);
 }

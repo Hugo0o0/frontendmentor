@@ -1,19 +1,35 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Color, Font } from "~/utils/enums/enums";
 
 const initalState = {
-  isOpen: false,
+  theme: Color.tomato,
+  font: Font.kumbh,
+  isModalOpen: false,
 };
 
 const uiSlice = createSlice({
   name: "ui",
   initialState: initalState,
   reducers: {
-    toggle(state) {
-      state.isOpen = !state.isOpen;
+    setTheme(state, action: PayloadAction<Color>) {
+      state.theme = action.payload;
+    },
+
+    setFont(state, action: PayloadAction<Font>) {
+      state.font = action.payload;
+    },
+
+    storeChanges(state) {
+      localStorage.setItem("theme", state.theme.toString());
+      localStorage.setItem("font", state.font.toString());
+    },
+
+    setModal(state, action: PayloadAction<boolean>) {
+      state.isModalOpen = action.payload;
     },
   },
 });
 
-export const { toggle } = uiSlice.actions;
+export const { setFont, setTheme, storeChanges, setModal } = uiSlice.actions;
 
 export default uiSlice.reducer;

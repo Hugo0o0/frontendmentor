@@ -9,14 +9,21 @@
   cursor: pointer;
 
   background-color: transparent;
-  color: var(--clr-gray-100);
+  color: var(--clr-dark-100);
 
   font-size: 1.4rem;
 
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  background-color: var(--clr-primary);
 }
 
-.btn--active {
-  background-color: var(--clr-primary);
-  color: var(--clr-dark-100);
+.btn-text {
+  background-color: transparent;
+  color: var(--clr-gray-100);
+  opacity: 0.4;
+}
+
+.btn-text:hover {
+  opacity: 1;
 }

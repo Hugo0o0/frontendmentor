@@ -1,63 +1,45 @@
-import { useEffect, useRef, useState } from "react";
+import useTheme from "~/utils/hooks/useTheme";
 import styles from "./SelectFont.module.css";
+import { useMemo } from "react";
+
+const fontButtons = [
+  {
+    classNames: `${styles["select-font__option"]}   ${styles["select-font__option--kumbh"]}`,
+    id: 0,
+  },
+  {
+    classNames: `${styles["select-font__option"]}  ${styles["select-font__option--roboto"]}`,
+    id: 1,
+  },
+  {
+    classNames: `${styles["select-font__option"]}  ${styles["select-font__option--space"]}`,
+    id: 2,
+  },
+];
 
 const SelectFont = () => {
-  const [activeFont, setActiveFont] = useState("kumbh");
+  const { setFont, font, dispatch } = useTheme();
 
-  useEffect(() => {
-    const font = localStorage.getItem("font");
-    if (font) {
-      setActiveFont(font);
-    }
-  }, []);
+  const activeClassName = styles["select-font__option--active"];
 
-  const handleFontChange = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const name = e.currentTarget.getAttribute("name");
-
-    if (!name) return;
-
-    document.documentElement.setAttribute("data-font", name);
-    setActiveFont(name);
-    localStorage.setItem("font", name);
+  const handleChangeFont = (font: number) => {
+    dispatch(setFont(font));
   };
-
-  const isKumbh = activeFont === "kumbh";
-  const isRoboto = activeFont === "roboto";
-  const isSpace = activeFont === "space";
 
   return (
     <div className={styles["select-font"]}>
-      <h4 className="heading-4">FONT</h4>
-      <div className={styles["select-font__fonts"]}>
-        <button
-          name="kumbh"
-          onClick={handleFontChange}
-          className={`${styles["select-font__font"]} ${
-            isKumbh && styles["select-font__font--active"]
-          }`}
-        >
-          <p>Aa</p>
-        </button>
+      <h3 className="heading-4">FONT</h3>
 
-        <button
-          name="roboto"
-          onClick={handleFontChange}
-          className={`${styles["select-font__font"]} ${
-            styles["select-font__font--roboto"]
-          }  ${isRoboto && styles["select-font__font--active"]}`}
-        >
-          <p>Aa</p>
-        </button>
-
-        <button
-          name="space"
-          onClick={handleFontChange}
-          className={`${styles["select-font__font"]}  ${
-            isSpace && styles["select-font__font--active"]
-          }`}
-        >
-          <p>Aa</p>
-        </button>
+      <div className={styles["select-font__options"]}>
+        {fontButtons.map(({ classNames, id }) => (
+          <button
+            onClick={handleChangeFont.bind(null, id)}
+            key={classNames}
+            className={`${classNames} ${id === font && activeClassName}`}
+          >
+            Aa
+          </button>
+        ))}
       </div>
     </div>
   );

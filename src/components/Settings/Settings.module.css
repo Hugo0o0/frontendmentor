@@ -1,0 +1,7 @@
+.settings {
+  transition: all 1s ease-in-out;
+}
+
+.settings:hover {
+  transform: rotate(180deg);
+}

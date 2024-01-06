@@ -1,34 +1,57 @@
 .select-color {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  padding-bottom: 2.5rem;
 }
 
-.select-color__colors {
+.select-color__options {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.select-color__color {
+.select-color__option {
   width: 4rem;
   height: 4rem;
+
   border-radius: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
+  position: relative;
 }
 
-.select-color__color--tomato {
+.select-color__option::before {
+  content: "";
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #e0e0e0;
+
+  opacity: 0;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.select-color__option:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.select-color__option--tomato {
   background-color: var(--clr-tomato);
 }
 
-.select-color__color--pink {
-  background-color: var(--clr-pink);
+.select-color__option--cyan {
+  background-color: var(--clr-cyan);
 }
 
-.select-color__color--cyan {
-  background-color: var(--clr-cyan);
+.select-color__option--pink {
+  background-color: var(--clr-pink);
 }

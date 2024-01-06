@@ -1,11 +1,15 @@
+import useModal from "~/utils/hooks/useModal";
 import { Settings as SettingsIcon } from "../Icons";
-import { useDispatch } from "react-redux";
-import { toggle } from "~/store/ui/ui-slice";
+import styles from "./Settings.module.css";
 
 const Settings = () => {
-  const dispatch = useDispatch();
-
-  return <SettingsIcon onClick={dispatch.bind(null, toggle())} />;
+  const { dispatch, setModal } = useModal();
+  return (
+    <SettingsIcon
+      onClick={() => dispatch(setModal(true))}
+      className={styles.settings}
+    />
+  );
 };
 
 export default Settings;

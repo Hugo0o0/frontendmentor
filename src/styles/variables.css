@@ -1,9 +1,9 @@
 :root {
   --ff-primary: "Kumbh Sans", sans-serif;
 
-  --ff-kumbh-sans: "Kumbh Sans", sans-serif;
-  --ff-roboto-slab: "Roboto Slab", serif;
-  --ff-space-mono: "Space Mono", monospace;
+  --ff-kumbh: "Kumbh Sans", sans-serif;
+  --ff-roboto: "Roboto Slab", serif;
+  --ff-space: "Space Mono", monospace;
 
   --clr-primary: hsl(0, 91%, 71%);
 
@@ -20,26 +20,26 @@
   --clr-gray-100: hsl(227, 100%, 92%);
 }
 
-html[data-theme="tomato"] {
+html[data-theme="0"] {
   --clr-primary: hsl(0, 91%, 71%);
 }
 
-html[data-theme="cyan"] {
+html[data-theme="1"] {
   --clr-primary: hsl(182, 91%, 71%);
 }
 
-html[data-theme="pink"] {
+html[data-theme="2"] {
   --clr-primary: hsl(284, 89%, 74%);
 }
 
-html[data-font="kumbh"] {
+html[data-font="0"] {
   --ff-primary: "Kumbh Sans", sans-serif;
 }
 
-html[data-font="roboto"] {
+html[data-font="1"] {
   --ff-primary: "Roboto Slab", serif;
 }
 
-html[data-font="space"] {
+html[data-font="2"] {
   --ff-primary: "Space Mono", monospace;
 }

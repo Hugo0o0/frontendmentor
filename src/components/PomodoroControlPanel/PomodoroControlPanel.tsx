@@ -1,46 +1,29 @@
 import styles from "./PomodoroControlPanel.module.css";
 import Button from "~/components/Button/Button.tsx";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { setCurrentTimer } from "~/store/timer/timer-slice";
+import { useSelector } from "react-redux";
+import { RootState } from "~/store/store";
 
-const buttons = [
-  {
-    displayName: "pomodoro",
-    variableName: "pomodoro",
-  },
-  {
-    displayName: "short break",
-    variableName: "shortBreak",
-  },
-  {
-    displayName: "long break",
-    variableName: "longBreak",
-  },
-];
+const buttons = ["pomodoro", "short break", "long break"];
 
 const PomodoroControlPanel = () => {
   const [activeBtn, setActiveBtn] = useState(0);
-  const dispatch = useDispatch();
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const id = e.currentTarget.id;
+  const { pomodoro } = useSelector((state: RootState) => state.timer);
 
-    dispatch(setCurrentTimer(e.currentTarget.name));
-    setActiveBtn(parseInt(id));
-  };
+  console.log(Date.now() - pomodoro);
 
   return (
     <div className={styles["control-panel"]}>
       {buttons.map((btn, index) => (
         <Button
-          name={btn.variableName}
           id={index.toString()}
           active={activeBtn === index}
-          onClick={handleClick}
+          onClick={setActiveBtn.bind(null, index)}
           key={index}
+          variant={activeBtn !== index ? "text" : "default"}
         >
-          {btn.displayName}
+          {btn}
         </Button>
       ))}
     </div>
