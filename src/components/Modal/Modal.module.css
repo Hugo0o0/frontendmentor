@@ -13,19 +13,3 @@
   justify-content: center;
   align-items: center;
 }
-.modal__content {
-  width: 54rem;
-  height: 49rem;
-
-  background-color: var(--clr-white-100);
-
-  border-radius: 25px;
-
-  position: relative;
-}
-
-.modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

@@ -15,3 +15,9 @@ body {
 
   background-color: var(--clr-dark-100);
 }
+
+@media only screen and (max-width: 29.8125em) {
+  html {
+    font-size: 60%;
+  }
+}

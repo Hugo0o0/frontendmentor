@@ -33,3 +33,9 @@
   text-transform: uppercase;
   color: var(--clr-dark-200);
 }
+
+@media only screen and (max-width: 23.4375em) {
+  .heading-1 {
+    font-size: 8rem;
+  }
+}

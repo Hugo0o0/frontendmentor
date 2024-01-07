@@ -1,6 +1,5 @@
 import useTheme from "~/utils/hooks/useTheme";
 import styles from "./SelectFont.module.css";
-import { useMemo } from "react";
 
 const fontButtons = [
   {

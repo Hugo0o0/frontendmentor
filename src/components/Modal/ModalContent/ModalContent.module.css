@@ -7,3 +7,9 @@
 
   border-radius: 25px;
 }
+
+@media only screen and (max-width: 29.8125em) {
+  .modal-content {
+    width: 32.7rem;
+  }
+}

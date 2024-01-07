@@ -55,3 +55,11 @@
 .select-color__option--pink {
   background-color: var(--clr-pink);
 }
+
+@media only screen and (max-width: 29.8125em) {
+  .select-color {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}

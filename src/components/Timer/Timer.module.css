@@ -3,14 +3,12 @@
   justify-content: center;
   align-items: center;
 
-  width: 41rem;
-  height: 41rem;
+  width: 42rem;
+  height: 42rem;
 
   border-radius: 100%;
   background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-  box-shadow:
-    50px 50px 100px 0px #121530,
-    -50px -50px 100px 0px #272c5a;
+  box-shadow: 50px 50px 100px 0px #121530, -50px -50px 100px 0px #272c5a;
 }
 
 .timer {
@@ -20,8 +18,8 @@
   align-items: center;
   gap: 2rem;
 
-  width: 36rem;
-  height: 36rem;
+  width: 42rem;
+  height: 42rem;
 
   border-radius: 100%;
 
@@ -40,4 +38,22 @@
   height: 33.9rem;
 
   border-radius: 100%;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 29.8125em) {
+  .timer-container {
+    width: 33rem;
+    height: 33rem;
+  }
+
+  .timer {
+    width: 33rem;
+    height: 33rem;
+  }
+
+  .timer__progress {
+    width: 30rem;
+    height: 30rem;
+  }
 }

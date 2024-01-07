@@ -24,3 +24,22 @@
 
   font-size: 1.4rem;
 }
+
+@media only screen and (max-width: 29.8125em) {
+  .time-settings {
+    align-items: center;
+  }
+
+  .time-settings__controllers {
+    flex-direction: column;
+    width: 100%;
+
+    gap: 1rem;
+  }
+  .time-settings__controller {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

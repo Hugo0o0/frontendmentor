@@ -1,17 +1,40 @@
 import styles from "./PomodoroControlPanel.module.css";
 import Button from "~/components/Button/Button.tsx";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  CurrentTimerType,
+  changeActiveTimer,
+  resetTimers,
+} from "~/store/timer/timer-slice";
 import { RootState } from "~/store/store";
 
-const buttons = ["pomodoro", "short break", "long break"];
+const buttons = [
+  {
+    displayName: "pomodoro",
+    varName: "pomodoro",
+  },
+  {
+    displayName: "short break",
+    varName: "shortBreak",
+  },
+  {
+    displayName: "long break",
+    varName: "longBreak",
+  },
+];
 
 const PomodoroControlPanel = () => {
   const [activeBtn, setActiveBtn] = useState(0);
 
-  const { pomodoro } = useSelector((state: RootState) => state.timer);
+  const dispatch = useDispatch();
 
-  console.log(Date.now() - pomodoro);
+  const { isActive } = useSelector((state: RootState) => state.timer);
+
+  const handleClick = (name: CurrentTimerType) => {
+    dispatch(changeActiveTimer(name));
+    dispatch(resetTimers());
+  };
 
   return (
     <div className={styles["control-panel"]}>
@@ -19,11 +42,18 @@ const PomodoroControlPanel = () => {
         <Button
           id={index.toString()}
           active={activeBtn === index}
-          onClick={setActiveBtn.bind(null, index)}
+          onClick={() => {
+            if (isActive) {
+              alert("You can't change timer while it's running");
+              return;
+            }
+            setActiveBtn(index);
+            handleClick(btn.varName as CurrentTimerType);
+          }}
           key={index}
           variant={activeBtn !== index ? "text" : "default"}
         >
-          {btn}
+          {btn.displayName}
         </Button>
       ))}
     </div>

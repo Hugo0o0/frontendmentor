@@ -5,7 +5,6 @@ import SelectColor from "~/components/SelectColor/SelectColor";
 import Button from "~/components/Button/Button";
 import styles from "./SettingsModal.module.css";
 import useModal from "~/utils/hooks/useModal";
-import { applyTimes } from "~/store/timer/timer-slice";
 import { storeChanges } from "~/store/ui/ui-slice";
 import useTheme from "~/utils/hooks/useTheme";
 import { Color, Font } from "~/utils/enums/enums";
@@ -15,7 +14,6 @@ const SettingsModal = () => {
   const { font, theme } = useTheme();
 
   const handleApply = () => {
-    dispatch(applyTimes());
     dispatch(storeChanges());
 
     document.documentElement.style.setProperty(
