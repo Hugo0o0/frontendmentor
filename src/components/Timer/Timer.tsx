@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./Timer.module.css";
 import ProgressBar from "~/components/ProgressBar/ProgressBar.tsx";
 import { RootState } from "~/store/store";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { startTimer, toggleActive } from "~/store/timer/timer-slice";
 
 const Timer = () => {

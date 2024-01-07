@@ -1,4 +1,3 @@
-import Button from "~/components/Button/Button";
 import styles from "./ModalFooter.module.css";
 
 const ModalFooter = ({ children }: { children: React.ReactNode }) => {
