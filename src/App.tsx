@@ -1,11 +1,11 @@
 import styles from "./App.module.css";
-import Logo from "~/components/Logo/Logo.tsx";
 import PomodoroControlPanel from "~/components/PomodoroControlPanel/PomodoroControlPanel.tsx";
 import Timer from "~/components/Timer/Timer.tsx";
 import Settings from "~/components/Settings/Settings.tsx";
 import SettingsModal from "~/components/SettingsModal/SettingsModal.tsx";
 import { useEffect } from "react";
 import useTheme from "~/utils/hooks/useTheme";
+import { Logo } from "~/components/Icons";
 
 const App = () => {
   const { dispatch, setFont, setTheme } = useTheme();
