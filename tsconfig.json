@@ -22,8 +22,8 @@
     "baseUrl": "./src",
     "paths": {
       "~/*": ["./*"]
-    },
+    }
   },
-  "include": ["src"],
+  "include": ["src", "src/components/Icons/.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

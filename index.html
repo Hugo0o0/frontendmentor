@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html data-theme="0" data-font="0" lang="en">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="/vite.svg" rel="icon" type="image/svg+xml" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="modal"></div>
     <div id="root"></div>
-    <script>
-      const font = localStorage.getItem("font") || "0";
-      const theme = localStorage.getItem("theme") || "0";
-      document.documentElement.setAttribute("data-theme", theme);
-      document.documentElement.setAttribute("data-font", font);
-    </script>
-    <script src="/src/main.tsx" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

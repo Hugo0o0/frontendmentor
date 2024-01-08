@@ -1,5 +1,3 @@
-export interface TimesType {
-  shortBreak: number;
-  longBreak: number;
-  pomodoro: number;
-}
+import { SVGAttributes } from "react";
+
+export interface SVGProps extends SVGAttributes<SVGElement> {}

@@ -1,45 +1,20 @@
 :root {
-  --ff-primary: "Kumbh Sans", sans-serif;
+  --clr-primary: hsl(242, 48%, 58%);
+  --clr-primary-light: hsl(243, 100%, 82%);
 
-  --ff-kumbh: "Kumbh Sans", sans-serif;
-  --ff-roboto: "Roboto Slab", serif;
-  --ff-space: "Space Mono", monospace;
+  --clr-dark-navy: hsl(237, 100%, 4%);
 
-  --clr-primary: hsl(0, 91%, 71%);
+  --charcoal: hsl(235, 16%, 15%);
+  --dark-slate: hsl(235, 12%, 19%);
+  --slate-gray: hsl(236, 11%, 27%);
 
-  --clr-tomato: hsl(0, 91%, 71%);
-  --clr-cyan: hsl(182, 91%, 71%);
-  --clr-pink: hsl(284, 89%, 74%);
+  --steel-gray: hsl(216, 15%, 57%);
+  --pale-blue: hsl(221, 69%, 94%);
+  --light-blue: hsl(220, 69%, 97%);
+  --white: hsl(0, 0%, 100%);
 
-  --clr-dark-100: hsl(235, 35%, 18%);
-  --clr-dark-200: hsl(234, 39%, 14%);
+  --danger-red: hsl(0, 78%, 63%);
+  --light-red: hsl(0, 100%, 80%);
 
-  --clr-white-100: hsl(0, 0%, 100%);
-  --clr-white-200: hsl(229, 52%, 96%);
-
-  --clr-gray-100: hsl(227, 100%, 92%);
-}
-
-html[data-theme="0"] {
-  --clr-primary: hsl(0, 91%, 71%);
-}
-
-html[data-theme="1"] {
-  --clr-primary: hsl(182, 91%, 71%);
-}
-
-html[data-theme="2"] {
-  --clr-primary: hsl(284, 89%, 74%);
-}
-
-html[data-font="0"] {
-  --ff-primary: "Kumbh Sans", sans-serif;
-}
-
-html[data-font="1"] {
-  --ff-primary: "Roboto Slab", serif;
-}
-
-html[data-font="2"] {
-  --ff-primary: "Space Mono", monospace;
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
 }

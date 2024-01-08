@@ -1,35 +1,14 @@
-import styles from "./App.module.css";
-import PomodoroControlPanel from "~/components/PomodoroControlPanel/PomodoroControlPanel.tsx";
-import Timer from "~/components/Timer/Timer.tsx";
-import Settings from "~/components/Settings/Settings.tsx";
-import SettingsModal from "~/components/SettingsModal/SettingsModal.tsx";
-import { useEffect } from "react";
-import useTheme from "~/utils/hooks/useTheme";
-import { Logo } from "~/components/Icons";
+import { useTheme } from "styled-components";
+import { Heading } from "~/components/UI/Typography";
 
 const App = () => {
-  const { dispatch, setFont, setTheme } = useTheme();
+  const theme = useTheme();
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    const storedFont = localStorage.getItem("font");
-
-    if (storedTheme) {
-      dispatch(setTheme(+storedTheme));
-    }
-
-    if (storedFont) {
-      dispatch(setFont(+storedFont));
-    }
-  }, []);
+  console.log(theme);
 
   return (
-    <div className={styles.app}>
-      <SettingsModal />
-      <Logo />
-      <PomodoroControlPanel />
-      <Timer />
-      <Settings />
+    <div>
+      <Heading variant="xl">Hello World</Heading>
     </div>
   );
 };

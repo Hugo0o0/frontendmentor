@@ -1,23 +1,13 @@
-@import "styles/reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@700&family=Space+Mono:wght@700&display=swap");
-@import "styles/variables.css";
-@import "styles/utilities.css";
+@import url(styles/reset.css);
+@import url(styles/variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
 
-html {
-  font-size: 62.5%;
-}
 body {
   min-height: 100vh;
 
-  font-weight: 700;
   font-family: var(--ff-primary);
-  font-size: 1.6rem;
-
-  background-color: var(--clr-dark-100);
 }
 
-@media only screen and (max-width: 29.8125em) {
-  html {
-    font-size: 60%;
-  }
+html {
+  font-size: 62.5%;
 }
