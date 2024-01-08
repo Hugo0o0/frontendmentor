@@ -1,15 +1,16 @@
-import { useTheme } from "styled-components";
-import { Heading } from "~/components/UI/Typography";
+import { RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import router from "~/router";
+import theme from "~/theme/theme";
+import BodyWrapper from "./components/BodyWrapper/BodyWrapper";
 
 const App = () => {
-  const theme = useTheme();
-
-  console.log(theme);
-
   return (
-    <div>
-      <Heading variant="xl">Hello World</Heading>
-    </div>
+    <ThemeProvider theme={theme.light}>
+      <BodyWrapper>
+        <RouterProvider router={router} />
+      </BodyWrapper>
+    </ThemeProvider>
   );
 };
 

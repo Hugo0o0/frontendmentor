@@ -17,16 +17,16 @@ const headingOptions: HeadingOptionsType = {
     fontWeight: "700",
   },
 
-  l: {
+  lg: {
     fontSize: "1.8rem",
     fontWeight: "700",
   },
 
-  m: {
+  md: {
     fontSize: "1.rem",
     fontWeight: "700",
   },
-  s: {
+  sm: {
     fontSize: "1.2rem",
     fontWeight: "700",
     letterSpacing: "2.4px",
@@ -34,21 +34,21 @@ const headingOptions: HeadingOptionsType = {
   },
 };
 
-type HeadingVariantType = "xl" | "l" | "m" | "s";
+type HeadingVariantType = "xl" | "lg" | "md" | "sm";
 
 interface HeadingProps {
-  variant?: HeadingVariantType;
+  size?: HeadingVariantType;
 }
 
 const Heading = styled.h1<HeadingProps>`
-  font-size: ${(props) => headingOptions[props.variant!].fontSize};
-  font-weight: ${(props) => headingOptions[props.variant!].fontWeight};
-  letter-spacing: ${(props) => headingOptions[props.variant!].letterSpacing};
-  color: ${(props) => headingOptions[props.variant!]?.color};
+  font-size: ${(props) => headingOptions[props.size!].fontSize};
+  font-weight: ${(props) => headingOptions[props.size!].fontWeight};
+  letter-spacing: ${(props) => headingOptions[props.size!].letterSpacing};
+  color: ${(props) => headingOptions[props.size!]?.color};
 `;
 
 Heading.defaultProps = {
-  variant: "xl",
+  size: "xl",
 };
 
 export default Heading;
