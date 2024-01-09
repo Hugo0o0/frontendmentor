@@ -6,7 +6,7 @@ import BodyWrapper from "./components/BodyWrapper/BodyWrapper";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme.light}>
+    <ThemeProvider theme={theme.dark}>
       <BodyWrapper>
         <RouterProvider router={router} />
       </BodyWrapper>
