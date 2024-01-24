@@ -21,16 +21,29 @@
     --white: 0 0% 100%;
 
     --danger-red: 0 78% 63%;
-    --light-danger-red: 0 100% 80%;
+    --danger-red-light: 0 100% 80%;
 
     --body-bg: var(--ultra-light-blue);
     --item-bg: var(--white);
 
     --text: var(--white);
 
+    --border: var(--pale-blue);
+
     --ff-body: "Plus Jakarta Sans", sans-serif;
-    --ff-body-medium: 500;
-    --ff-body-bold: 700;
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-xl: 2.4rem;
+    --fs-lg: 1.8rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.2rem;
+
+    --lh-xl: 3rem;
+    --lh-lg: 2.3rem;
+    --lh-md: 1.9rem;
+    --lh-sm: 1.5rem;
   }
 
   html[data-theme="dark"] {
@@ -38,6 +51,8 @@
     --item-bg: var(--medium-gray);
 
     --text: var(--white);
+
+    --border: var(--light-gray);
   }
 
   html[data-theme="light"] {
@@ -45,17 +60,24 @@
     --item-bg: var(--white);
 
     --text: var(--dark-navy);
+
+    --border: var(--pale-blue);
   }
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  min-height: 100vh;
+  @apply min-h-screen;
 
   @apply bg-body;
 
   @apply text-default;
   @apply font-default;
   @apply font-medium;
+  @apply font-default;
 
   @apply transition-all;
 }

@@ -12,28 +12,34 @@ export const ThemeContext = createContext<ThemeContextProps>({
   toggle: () => {},
 });
 
+const saveTheme = (theme: theme) => {
+  window.localStorage.setItem("theme", theme);
+  document.documentElement.dataset.theme = theme;
+};
+
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<theme>("light");
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
 
-    if (!localTheme) return;
+    if (!localTheme) {
+      saveTheme("light");
+      return;
+    }
 
-    setTheme(localTheme as theme);
-    document.documentElement.dataset.theme = localTheme;
+    if (localTheme === "light" || localTheme === "dark") {
+      setTheme(localTheme as theme);
+      document.documentElement.dataset.theme = localTheme;
+    }
   }, []);
 
   const toggle = () => {
-    console.log(theme);
-
     if (theme === "light") {
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.dataset.theme = "dark";
+      saveTheme("dark");
       setTheme("dark");
     } else if (theme === "dark") {
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.dataset.theme = "light";
+      saveTheme("light");
       setTheme("light");
     }
   };
