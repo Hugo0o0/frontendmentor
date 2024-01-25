@@ -5,7 +5,7 @@ import ModalFooter from "../ModalFooter/ModalFooter";
 import useModal from "~/utils/hooks/useModal";
 import { AnimatePresence } from "framer-motion";
 import { Slide } from "~/components/Animations";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import useOutSideClick from "~/utils/hooks/useOutSideClick";
 import useKeyPress from "~/utils/hooks/useKeyPress";
 
