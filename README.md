@@ -15,10 +15,9 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-  [Solution URL](https://www.frontendmentor.io/solutions/pomodoro-app-using-reactjs-NVw0yhw3pL)
+-  [Live Site URL](https://pomodoro-app-ashen.vercel.app/)
 
-## My process
 
 ### Built with
 
@@ -31,7 +30,7 @@ Users should be able to:
 
 ### What I learned
 
-While working on this project i learned i should not just write the code, i need a plan before working on in
+While working on this project i learned that should not just write the code, need a plan before working on in
 
 ## Author
 
