@@ -81,3 +81,8 @@ body {
 
   @apply transition-all;
 }
+
+#root {
+  @apply pt-[9.7rem];
+  @apply h-screen;
+}

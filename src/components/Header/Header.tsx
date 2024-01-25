@@ -1,6 +1,6 @@
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
-import HeaderPlatformName from "./HeaderLogo/HeaderPlatformName/HeaderPlatformName";
-import HeaderActions from "./HeaderLogo/HeaderActions/HeaderActions";
+import HeaderPlatformName from "./HeaderPlatformName/HeaderPlatformName";
+import HeaderActions from "./HeaderActions/HeaderActions";
 
 const Header = () => {
   return (

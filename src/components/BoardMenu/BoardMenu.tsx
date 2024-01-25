@@ -29,7 +29,7 @@ const BoardMenu = () => {
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? "bg-body text-gray-900" : "text-gray-700",
+                    active ? "bg-body" : "text-danger-red ",
                     "block px-4 py-3 my-3 text-sm  w-full text-left text-danger-red"
                   )}
                 >

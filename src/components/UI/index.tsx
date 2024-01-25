@@ -1,4 +1,5 @@
 import { Heading } from "./Typography";
-import Fade from "./Animations/Fade/Fade";
+import { Fade, ScaleAndFade } from "./Animations/";
+import Button from "./Button/Button";
 
-export { Heading, Fade };
+export { Heading, Fade, Button, ScaleAndFade };
