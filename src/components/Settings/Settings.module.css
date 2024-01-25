@@ -1,7 +1,5 @@
 .settings {
-  transition: all 1s ease-in-out;
-}
+  transition: all 700ms ease-in-out;
 
-.settings:hover {
-  transform: rotate(180deg);
+  cursor: pointer;
 }

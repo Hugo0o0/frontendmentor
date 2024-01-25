@@ -1,6 +1,8 @@
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
 import ModalContent from "./ModalContent/ModalContent";
+import { AnimatePresence } from "framer-motion";
+import { Fade } from "~/components/Animations";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -9,7 +11,9 @@ interface ModalProps {
 
 const Modal = ({ children, isOpen }: ModalProps) => {
   return createPortal(
-    <>{isOpen && <div className={styles.modal}>{children}</div>}</>,
+    <AnimatePresence>
+      {isOpen && <Fade className={styles.modal}>{children}</Fade>}
+    </AnimatePresence>,
     document.getElementById("modal")!
   );
 };

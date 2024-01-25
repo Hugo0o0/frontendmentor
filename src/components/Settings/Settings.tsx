@@ -5,12 +5,15 @@ import { useSelector } from "react-redux";
 import { RootState } from "~/store/store";
 
 const Settings = () => {
-  const { dispatch, setModal } = useModal();
+  const { dispatch, setModal, isModalOpen } = useModal();
   const { isActive } = useSelector((state: RootState) => state.timer);
   return (
     <SettingsIcon
       onClick={() => !isActive && dispatch(setModal(true))}
       className={styles.settings}
+      style={{
+        transform: isModalOpen ? "rotate(90deg)" : "rotate(0deg)",
+      }}
     />
   );
 };
